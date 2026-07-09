@@ -1,100 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Fishing App Only The Real Ones Use</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fishing App Only The Real Ones Use</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #e8f7ff;
+      color: #00334d;
+    }
+
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    nav {
+      background: #023e8a;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #999;
+    }
+
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #023e8a;
+    }
+
+    footer {
+      background: #003049;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>🎣 The Fishing App</h1>
-    <p>Only The Real Ones Use</p>
+  <h1>🎣 The Fishing App Only The Real Ones Use</h1>
+  <p>Your fishing knowledge starts here</p>
 </header>
 
 <nav>
-    <button onclick="showSection('home')">🏠 Home</button>
-    <button onclick="showSection('catches')">🐟 Catch Log</button>
-    <button onclick="showSection('spots')">📍 Spots</button>
-    <button onclick="showSection('guide')">🦐 Bream Guide</button>
-    <button onclick="showSection('trophy')">🏆 Trophy Room</button>
+  <a href="#spots">Spots</a>
+  <a href="#gear">Gear</a>
+  <a href="#tips">Tips</a>
 </nav>
 
 
-<section id="home" class="page">
-    <h2>Welcome Angler 🎣</h2>
-    <p>Track your catches, save your spots and become a better fisherman.</p>
-
-    <div class="level-box">
-        <h3>Angler Level</h3>
-        <p id="level">Level 1 Rookie</p>
-        <p>XP: <span id="xp">0</span></p>
-    </div>
-</section>
-
-
-<section id="catches" class="page hidden">
-    <h2>🐟 Catch Log</h2>
-
-    <input id="fishName" placeholder="Fish species">
-    <input id="fishSize" placeholder="Size (cm)">
-    <input id="fishLure" placeholder="Lure used">
-
-    <button onclick="addCatch()">Save Catch</button>
-
-    <div id="catchList"></div>
-</section>
-
-
-<section id="spots" class="page hidden">
-    <h2>📍 Fishing Spots</h2>
-
-    <input id="spotName" placeholder="Spot name">
-    <input id="spotInfo" placeholder="Notes (tide, structure, tips)">
-
-    <button onclick="addSpot()">Save Spot</button>
-
-    <div id="spotList"></div>
-</section>
-
-
-<section id="guide" class="page hidden">
-    <h2>🦐 Bream Guide</h2>
-
-    <h3>Top Soft Plastic Colours</h3>
-
-    <ul>
-        <li>Motor Oil 🟤</li>
-        <li>Bloodworm 🔴</li>
-        <li>Natural Shrimp 🦐</li>
-        <li>Pearl White ⚪</li>
-    </ul>
-
-    <h3>Tips</h3>
+<section id="spots">
+  <div class="card">
+    <h2>🔥 Fishing Spots</h2>
     <p>
-        Fish structure, rock walls, pontoons and creek mouths.
-        The best times are usually around tide changes.
+      Find bream, flathead, snapper and more.
+      Add your favourite public fishing locations here.
     </p>
+  </div>
 </section>
 
 
-<section id="trophy" class="page hidden">
-    <h2>🏆 Trophy Room</h2>
+<section id="gear">
+  <div class="card">
+    <h2>🎣 Fishing Gear</h2>
+    <p>
+      Rods, reels, soft plastics, lures and setups for every fisherman.
+    </p>
 
-    <p>Your biggest catches will appear here.</p>
+    <button onclick="showMessage()">
+      Show Fishing Tip
+    </button>
 
-    <div id="trophyList"></div>
+  </div>
+</section>
+
+
+<section id="tips">
+  <div class="card">
+    <h2>🐟 Fishing Tips</h2>
+    <ul>
+      <li>Fish structure like rocks, weed beds and drop offs.</li>
+      <li>Match your lure size to the bait fish.</li>
+      <li>Early morning and late afternoon are prime times.</li>
+    </ul>
+  </div>
 </section>
 
 
 <footer>
-    <p>🎣 Built for real anglers</p>
+  <p>© 2026 The Fishing App Only The Real Ones Use</p>
 </footer>
 
 
-<script src="script.js"></script>
+<script>
+function showMessage() {
+  alert("🎣 Tip: Slow your lure down and fish the structure!");
+}
+</script>
 
 </body>
 </html>
