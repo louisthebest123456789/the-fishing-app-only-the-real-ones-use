@@ -1,134 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>The Fishing App Only The Real Ones Use</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #e8f7ff;
-      color: #00334d;
-    }
-
-    header {
-      background: #0077b6;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
-
-    nav {
-      background: #023e8a;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #999;
-    }
-
-    button {
-      background: #0077b6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #023e8a;
-    }
-
-    footer {
-      background: #003049;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
 <header>
-  <h1>🎣 The Fishing App Only The Real Ones Use</h1>
-  <p>Your fishing knowledge starts here</p>
+
+<h1>🎣 The Fishing App</h1>
+
+<p>
+Only The Real Ones Use
+</p>
+
 </header>
 
+
 <nav>
-  <a href="#spots">Spots</a>
-  <a href="#gear">Gear</a>
-  <a href="#tips">Tips</a>
+
+<a href="index.html">Home</a>
+<a href="maps.html">Maps</a>
+<a href="fishing-guide.html">Fish Guide</a>
+<a href="gear.html">Gear</a>
+
 </nav>
 
 
-<section id="spots">
-  <div class="card">
-    <h2>🔥 Fishing Spots</h2>
-    <p>
-      Find bream, flathead, snapper and more.
-      Add your favourite public fishing locations here.
-    </p>
-  </div>
+
+<section>
+
+
+<div class="card">
+
+<h2>🔥 Welcome Fisherman</h2>
+
+<p>
+Your ultimate fishing companion.
+Find spots, learn fish behaviour,
+and build the perfect setup.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🗺️ Fishing Maps</h2>
+
+<p>
+Find rock walls, creeks, reefs,
+drop-offs and fishing locations.
+</p>
+
+<a href="maps.html">
+
+<button>
+Open Maps
+</button>
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🐟 Fish Guide</h2>
+
+<p>
+Learn where fish live,
+what they eat and what lures work.
+</p>
+
+<a href="fishing-guide.html">
+
+<button>
+Open Fish Guide
+</button>
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🎣 Gear Builder</h2>
+
+<p>
+Create your dream rod, reel and lure setup.
+</p>
+
+<a href="gear.html">
+
+<button>
+Open Gear
+</button>
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🚀 Coming Soon</h2>
+
+<ul>
+
+<li>📍 Saved fishing spots</li>
+
+<li>🌊 Tide information</li>
+
+<li>🌡️ Weather updates</li>
+
+<li>🐟 Catch log</li>
+
+<li>⭐ Favourite locations</li>
+
+</ul>
+
+</div>
+
+
 </section>
 
-
-<section id="gear">
-  <div class="card">
-    <h2>🎣 Fishing Gear</h2>
-    <p>
-      Rods, reels, soft plastics, lures and setups for every fisherman.
-    </p>
-
-    <button onclick="showMessage()">
-      Show Fishing Tip
-    </button>
-
-  </div>
-</section>
-
-
-<section id="tips">
-  <div class="card">
-    <h2>🐟 Fishing Tips</h2>
-    <ul>
-      <li>Fish structure like rocks, weed beds and drop offs.</li>
-      <li>Match your lure size to the bait fish.</li>
-      <li>Early morning and late afternoon are prime times.</li>
-    </ul>
-  </div>
-</section>
 
 
 <footer>
-  <p>© 2026 The Fishing App Only The Real Ones Use</p>
+
+<p>
+© 2026 The Fishing App Only The Real Ones Use
+</p>
+
 </footer>
 
 
-<script>
-function showMessage() {
-  alert("🎣 Tip: Slow your lure down and fish the structure!");
-}
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
