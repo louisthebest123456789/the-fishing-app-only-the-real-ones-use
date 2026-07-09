@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Fishing App Only The Real Ones Use</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🎣 The Fishing App Only The Real Ones Use 🐟🇦🇺</h1>
+
+<p>Your free fishing companion for finding spots, tracking PB fish and becoming a better angler.</p>
+
+<div class="card">
+<h2>🐟 PB Tracker</h2>
+<p>Record your biggest fish!</p>
+
+<input id="fish" placeholder="Fish species">
+<input id="size" placeholder="Size (cm)">
+
+<button onclick="saveFish()">Save Catch</button>
+
+<p id="result"></p>
+</div>
+
+
+<div class="card">
+<h2>⭐ Bream Score</h2>
+
+<p>Does your spot have:</p>
+
+<label>🪨 Rocks <input type="checkbox" id="rocks"></label><br>
+<label>🌿 Mangroves <input type="checkbox" id="mangroves"></label><br>
+<label>🌊 Current <input type="checkbox" id="current"></label><br>
+
+<button onclick="score()">Check Score</button>
+
+<p id="score"></p>
+
+</div>
+
+
+<div class="card">
+<h2>📍 My Fishing Notes</h2>
+
+<textarea placeholder="Write your secret fishing notes here..."></textarea>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
