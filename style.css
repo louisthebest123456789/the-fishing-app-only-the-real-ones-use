@@ -1,117 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #06283D;
-    color: white;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e8f7ff;
+  color: #00334d;
 }
 
 header {
-    background: #1363DF;
-    padding: 25px;
-    border-bottom: 4px solid #47B5FF;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
+  background: #0077b6;
+  color: white;
+  padding: 25px;
+  text-align: center;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    background: #051923;
+  background: #023e8a;
+  padding: 10px;
+  text-align: center;
 }
 
-button {
-    background: #47B5FF;
-    color: #001;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-button:hover {
-    transform: scale(1.05);
+nav a:hover {
+  text-decoration: underline;
 }
 
-.page {
-    padding: 25px;
-}
-
-.hidden {
-    display: none;
-}
-
-input {
-    width: 80%;
-    padding: 12px;
-    margin: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-}
-
-.level-box {
-    background: #1363DF;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 15px;
-}
-
-#catchList,
-#spotList,
-#trophyList {
-    margin-top: 20px;
+section {
+  padding: 20px;
 }
 
 .card {
-    background: #0B4F6C;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 12px;
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-h2 {
-    color: #47B5FF;
+button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #0B4F6C;
-    margin: 10px;
-    padding: 12px;
-    border-radius: 10px;
+button:hover {
+  background: #023e8a;
 }
 
 footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #051923;
-}
-
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    button {
-        width: 90%;
-    }
-
-    input {
-        width: 90%;
-    }
+  background: #003049;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }
