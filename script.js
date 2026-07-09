@@ -1,34 +1,93 @@
-function saveFish() {
-    let fish = document.getElementById("fish").value;
-    let size = document.getElementById("size").value;
+let xp = 0;
 
-    if (fish === "" || size === "") {
-        document.getElementById("result").innerHTML =
-        "Please enter your fish details 🎣";
-        return;
-    }
+function showSection(section) {
+    let pages = document.querySelectorAll(".page");
 
-    document.getElementById("result").innerHTML =
-    "🐟 Saved catch: " + fish + " - " + size + "cm! Great work!";
+    pages.forEach(page => {
+        page.classList.add("hidden");
+    });
+
+    document.getElementById(section).classList.remove("hidden");
 }
 
 
-function score() {
+function addCatch() {
 
-    let total = 0;
+    let fish = document.getElementById("fishName").value;
+    let size = document.getElementById("fishSize").value;
+    let lure = document.getElementById("fishLure").value;
 
-    if (document.getElementById("rocks").checked) {
-        total += 30;
+    if (fish === "") {
+        alert("Add a fish species first!");
+        return;
     }
 
-    if (document.getElementById("mangroves").checked) {
-        total += 30;
+    let catchCard = document.createElement("div");
+    catchCard.className = "card";
+
+    catchCard.innerHTML = `
+        🐟 <b>${fish}</b><br>
+        Size: ${size} cm<br>
+        Lure: ${lure}
+    `;
+
+    document.getElementById("catchList").appendChild(catchCard);
+
+
+    xp += 10;
+
+    document.getElementById("xp").innerText = xp;
+
+
+    updateLevel();
+}
+
+
+
+function addSpot() {
+
+    let name = document.getElementById("spotName").value;
+    let info = document.getElementById("spotInfo").value;
+
+
+    if (name === "") {
+        alert("Add a spot name first!");
+        return;
     }
 
-    if (document.getElementById("current").checked) {
-        total += 40;
+
+    let spotCard = document.createElement("div");
+
+    spotCard.className = "card";
+
+
+    spotCard.innerHTML = `
+        📍 <b>${name}</b><br>
+        ${info}
+    `;
+
+
+    document.getElementById("spotList").appendChild(spotCard);
+
+}
+
+
+
+function updateLevel() {
+
+    let levelText = document.getElementById("level");
+
+
+    if (xp >= 100) {
+        levelText.innerText = "Level 3 Pro Angler 🏆";
     }
 
-    document.getElementById("score").innerHTML =
-    "🐟 Bream Score: " + total + "/100";
+    else if (xp >= 50) {
+        levelText.innerText = "Level 2 Skilled Angler 🎣";
+    }
+
+    else {
+        levelText.innerText = "Level 1 Rookie 🎣";
+    }
+
 }
