@@ -91,3 +91,83 @@ function updateLevel() {
     }
 
 }
+// The Fishing App Only The Real Ones Use
+// Main app features
+
+console.log("🎣 Fishing App loaded successfully!");
+
+
+// Fishing tips button
+function showMessage() {
+  alert(
+    "🎣 Fishing Tip:\n\n" +
+    "Target structure like rocks, weed beds and drop-offs.\n" +
+    "Slow your lure down and watch your line!"
+  );
+}
+
+
+// Fish database
+const fish = [
+  {
+    name: "Bream",
+    bait: "Soft plastics, prawns, small hard bodies",
+    spots: "Rock walls, bridges, creek mouths",
+    colour: "Motor oil, natural, bloodworm"
+  },
+
+  {
+    name: "Flathead",
+    bait: "3-5 inch soft plastics",
+    spots: "Sand flats, drop-offs, weed edges",
+    colour: "Pink, white, natural colours"
+  },
+
+  {
+    name: "Snapper",
+    bait: "Soft plastics, pilchards, squid",
+    spots: "Reefs, rubble, deeper structure",
+    colour: "Nuclear chicken, pearl, red"
+  },
+
+  {
+    name: "Jewfish",
+    bait: "Large soft plastics, live bait",
+    spots: "Deep holes, bridges, river mouths",
+    colour: "Dark colours at night"
+  }
+];
+
+
+// Search fish
+function searchFish() {
+
+  let search = prompt("What fish are you looking for?");
+
+  if (!search) {
+    return;
+  }
+
+  let result = fish.find(
+    item => item.name.toLowerCase() === search.toLowerCase()
+  );
+
+
+  if (result) {
+
+    alert(
+      "🐟 " + result.name +
+      "\n\nBest lures/baits: " + result.bait +
+      "\n\nBest spots: " + result.spots +
+      "\n\nGood colours: " + result.colour
+    );
+
+  } else {
+
+    alert(
+      "Sorry, we don't have that fish yet.\nMore species coming soon!"
+    );
+
+  }
+
+}
