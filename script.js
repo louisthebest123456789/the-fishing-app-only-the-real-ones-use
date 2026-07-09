@@ -171,3 +171,82 @@ function searchFish() {
   }
 
 }
+
+// Catch Log System
+
+function saveCatch() {
+
+  let catchData = {
+    fish: document.getElementById("fishName").value,
+    size: document.getElementById("fishSize").value,
+    location: document.getElementById("fishLocation").value,
+    notes: document.getElementById("fishNotes").value
+  };
+
+
+  let catches = JSON.parse(localStorage.getItem("catches")) || [];
+
+
+  catches.push(catchData);
+
+
+  localStorage.setItem(
+    "catches",
+    JSON.stringify(catches)
+  );
+
+
+  alert("🐟 Catch saved!");
+
+  displayCatches();
+
+}
+
+
+
+function displayCatches() {
+
+  let list = document.getElementById("catchList");
+
+  if (!list) {
+    return;
+  }
+
+
+  let catches = JSON.parse(localStorage.getItem("catches")) || [];
+
+
+  list.innerHTML = "";
+
+
+  catches.forEach(item => {
+
+    list.innerHTML += `
+
+    <div class="card">
+
+    <h3>🐟 ${item.fish}</h3>
+
+    <p>
+    Size: ${item.size}
+    </p>
+
+    <p>
+    Location: ${item.location}
+    </p>
+
+    <p>
+    Notes: ${item.notes}
+    </p>
+
+    </div>
+
+    `;
+
+  });
+
+}
+
+
+
+window.onload = displayCatches;
