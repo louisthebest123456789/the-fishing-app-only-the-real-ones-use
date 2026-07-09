@@ -2,98 +2,169 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fishing Maps - The Fishing App Only The Real Ones Use</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+<title>Fishing Maps - The Fishing App Only The Real Ones Use</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
+
 <header>
-  <h1>🗺️ Fishing Maps</h1>
-  <p>Find structure, spots and fishing zones</p>
+
+<h1>🗺️ Fishing Maps</h1>
+
+<p>
+Find structure. Find fish. Find your next session.
+</p>
+
 </header>
 
 
+
 <nav>
-  <a href="index.html">Home</a>
-  <a href="fishing-guide.html">Fish Guide</a>
-  <a href="maps.html">Maps</a>
+
+<a href="index.html">Home</a>
+<a href="maps.html">Maps</a>
+<a href="fishing-guide.html">Fish Guide</a>
+<a href="gear.html">Gear</a>
+<a href="catch-log.html">Catch Log</a>
+
 </nav>
+
+
 
 
 <section>
 
+
 <div class="card">
 
-<h2>📍 Fishing Spots</h2>
+<h2>🌊 Fishing Map</h2>
 
-<p>
-Soon you will be able to save:
-</p>
+<div style="
+height:350px;
+background:#bde0fe;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+">
 
-<ul>
-  <li>Rock walls</li>
-  <li>Creek mouths</li>
-  <li>Bridges</li>
-  <li>Reefs</li>
-  <li>Deep holes</li>
-</ul>
+<h3>
+🗺️ Interactive Map Coming Soon
+<br><br>
+Google Maps + Fishing Markers will be added here
+</h3>
+
+</div>
 
 </div>
 
 
-<div class="card">
-
-<h2>🌊 Depth Charts</h2>
-
-<p>
-Coming soon:
-</p>
-
-<ul>
-  <li>Water depth information</li>
-  <li>Drop-offs</li>
-  <li>Channels</li>
-  <li>Structure locations</li>
-</ul>
-
-</div>
 
 
 <div class="card">
 
-<h2>🎣 Spot Notes</h2>
+<h2>📍 Example Fishing Spots</h2>
+
+
+<h3>🪨 Rock Wall</h3>
 
 <p>
-Add your fishing notes here:
+Target:
+Bream, Flathead
 </p>
 
-<textarea 
-placeholder="Example: Bream bite best on rising tide near rocks..."
-rows="5"
-style="width:100%;">
-</textarea>
+<p>
+Structure:
+Rocks, current, bait fish
+</p>
+
+
+
+<hr>
+
+
+<h3>🌉 Bridge Structure</h3>
+
+<p>
+Target:
+Bream, Jewfish
+</p>
+
+<p>
+Structure:
+Pylons, shadows, deeper water
+</p>
+
+
+
+<hr>
+
+
+<h3>🌿 Creek Mouth</h3>
+
+<p>
+Target:
+Flathead, Bream
+</p>
+
+<p>
+Structure:
+Sand edges, drains, tide movement
+</p>
+
 
 </div>
+
+
+
 
 
 <div class="card">
 
-<h2>🚧 Upgrade Coming Soon</h2>
+
+<h2>🎣 Spot Finder</h2>
+
 
 <p>
-Interactive maps with pins and fishing locations will be added in the next version.
+Choose what you want to target:
 </p>
 
+
+<button onclick="findFish('Bream')">
+🐟 Bream
+</button>
+
+
+<button onclick="findFish('Flathead')">
+🐟 Flathead
+</button>
+
+
+<button onclick="findFish('Snapper')">
+🐟 Snapper
+</button>
+
+
+<p id="spotResult"></p>
+
+
 </div>
+
 
 
 </section>
+
+
 
 
 <footer>
@@ -103,6 +174,48 @@ Interactive maps with pins and fishing locations will be added in the next versi
 </p>
 
 </footer>
+
+
+
+
+<script>
+
+
+function findFish(fish){
+
+
+let result = document.getElementById("spotResult");
+
+
+if(fish === "Bream"){
+
+result.innerHTML =
+"🪨 Try rock walls, bridges and structure with small soft plastics.";
+
+}
+
+
+if(fish === "Flathead"){
+
+result.innerHTML =
+"🌊 Try sand flats, drop-offs and weed edges.";
+
+}
+
+
+if(fish === "Snapper"){
+
+result.innerHTML =
+"🐟 Try reefs, rubble and deeper water.";
+
+}
+
+
+}
+
+
+</script>
+
 
 
 </body>
